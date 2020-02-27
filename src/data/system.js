@@ -3,6 +3,18 @@ let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 
 var system = new Schema({
+    emp:{
+        type: Schema.Types.ObjectId,
+        ref: 'employees'
+    }, 
+    os:{
+        type: Schema.Types.ObjectId,
+        ref: 'os'
+    },
+    ms:{
+        type: Schema.Types.ObjectId,
+        ref: 'MSOffice'
+    },
     sysid: {
         type: String,
         required : true,

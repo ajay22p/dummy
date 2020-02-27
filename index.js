@@ -19,6 +19,14 @@ const sysadd = require('./src/api/system/sysadd.js');
 const sysshowDetails = require('./src/api/system/sysshowDetails.js');
 const sysedit = require('./src/api/system/sysedit.js');
 const sysdel = require('./src/api/system/sysdel.js');
+ 
+const dashboard = require('./src/api/system/dashboard.js');
+
+const dashadd = require('./src/api/dashboard/dashadd.js');
+const dashedit = require('./src/api/dashboard/dashedit.js'); 
+const dashdel = require('./src/api/dashboard/dashdel.js'); 
+const dashshow = require('./src/api/dashboard/dashshow.js');
+
 
 const osadd = require('./src/api/os/osadd.js');
 const osshowDetails = require('./src/api/os/osshowDetails.js');
@@ -54,6 +62,11 @@ router.use('/api/employee',showDetails);
 router.use('/api/employee',edit);
 router.use('/api/employee',empdel);
 router.use('/api/system',sysadd);
+router.use('/api/system',dashboard);
+router.use('/api/dashboard',dashadd);
+router.use('/api/dashboard',dashdel);
+router.use('/api/dashboard',dashedit);
+router.use('/api/dashboard',dashshow);
 router.use('/api/system',sysshowDetails);
 router.use('/api/system',sysedit);
 router.use('/api/system',sysdel);
